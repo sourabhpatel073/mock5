@@ -5,9 +5,7 @@ const { userRouter } = require("./Routes/userRoute")
 require("dotenv").config()
 
 const app=express()
-app.use("/",(req,res)=>{
-    res.send("welcome to employee data")
-})
+
 app.use("/user",userRouter)
 
 app.listen(process.env.port,async()=>{
